@@ -1,0 +1,35 @@
+
+ssh-keygen -t rsa -b 4096 -C "email@emaildomain.com"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+
+python -m venv ~/env
+mypython/scripts/activate
+deactivate
+pip install -r requirements.txt
+
+django-admin.py startproject profile_project
+python manage.py startapp profile_api
+python manage.py runserver
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+
+git init
+git add
+git Commit
+git push
+
+
+
+vagrant init
+vagrant up
+vagrant ssh
+(to quit, type exit£©
+
+
+
+
