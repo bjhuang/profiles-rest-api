@@ -3,6 +3,7 @@ ssh-keygen -t rsa -b 4096 -C "email@emaildomain.com"
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 
+curl -sL https://raw.githubusercontent.com/bjhuang/profiles-rest-api/master/deploy/setup.sh | sudo bash -
 
 python -m venv ~/env
 mypython/scripts/activate
